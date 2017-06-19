@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monitor>
+    <publishList>
+        <publish name="metrics:name=*">
+            <delay>30</delay>
+            <unit>SECONDS</unit>
+        </publish>
+    </publishList>
+</monitor>

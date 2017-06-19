@@ -1,0 +1,36 @@
+server:
+  requestLog:
+    timeZone: UTC
+    appenders:
+        - type: file
+          currentLogFilename: logs/hackathon-blue-tongue-access.log
+          archive: true
+          archivedLogFilenamePattern: logs/hackathon-blue-tongue-access-%d.log.gz
+          archivedFileCount: 1
+          timeZone: UTC
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: logs/hackathon-blue-tongue.txt
+      archive: true
+      archivedLogFilenamePattern: logs/hackathon-blue-tongue-%d.log.gz
+      archivedFileCount: 1
+      timeZone: UTC
+
+grafana:
+  endpoint: https://hubble.test.expedia.com
+  token: AQECAHjRKePSMzmcjUTEfWjZx1sBKmD4G8qWPZ8bvrLlHc4GOwAAAMIwgb8GCSqGSIb3DQEHBqCBsTCBrgIBADCBqAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAz8mgqquHyA7/MB/lICARCAe1QfAdCEOobPnvF3nYRWpxUDQlOJ+PSMBe2S+jjLUAJGcXhamdotbAUq7cbsxZCCZsDKRgxtkTlWVdxEOlTO5b85EcaxzZeMHi3svE8Icw1Cg5w/uZfOG+9Z3p/z1Q1Y9KpWJmb+Lvg2zMeTIk7L8slbh8xdgir4F8bwJQ==
+  client:
+    timeout: 1000ms
+    gzipEnabled: false
+    gzipEnabledForRequests: false
+
+seyren:
+  endpoint: http://seyren.test.expedia.com
+  client:
+    timeout: 1000ms
+
+auth:
+  apiUser: 61ea4113f56ba6e8cdb313eeb4d953be6ba29796614046c5281d5e7b468a2765 # apiKey
